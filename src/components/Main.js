@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Card from './Card';
 
 function Main({currentUser, cards, onEditAvatar, onEditProfile, onAddPlace, onCardClick}) {
@@ -11,7 +11,7 @@ function Main({currentUser, cards, onEditAvatar, onEditProfile, onAddPlace, onCa
         setUserName(currentUser.name);
         setUserDescription(currentUser.about);
         setUserAvatar(currentUser.avatar);
-    }, [])
+    }, [currentUser])
 
     return (
         <main className="content">
