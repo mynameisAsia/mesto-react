@@ -21,6 +21,7 @@ function App() {
             .then((res) => {
                 setCards(res);
             })
+            .catch((err) => console.log(err));
     }, [])
 
 
@@ -77,9 +78,9 @@ function App() {
                 onClose={closeAllPopups}
                 children={
                 <>
-                    <input type="text" id="name" name="name" className="popup__input popup__input_type_firstname" placeholder="Имя" value="Жак-Ив Кусто" contentEditable="true" minLength="2" maxLength="40" required />
+                    <input type="text" id="name" name="name" className="popup__input popup__input_type_firstname" placeholder="Имя" defaultValue="Жак-Ив Кусто" minLength="2" maxLength="40" required />
                     <span id="name-error" className="error"></span>
-                    <input type="text" id="about" name="about" className="popup__input popup__input_type_job" placeholder="Описание" value="Исследователь океана" contentEditable="true" minLength="2" maxLength="200" required />
+                    <input type="text" id="about" name="about" className="popup__input popup__input_type_job" placeholder="Описание" defaultValue="Исследователь океана" minLength="2" maxLength="200" required />
                     <span id="about-error" className="error"></span>
                 </>
             } />
@@ -87,9 +88,9 @@ function App() {
                 onClose={closeAllPopups}
                 children={
                 <>
-                    <input type="text" id="title" name="name" className="popup__input popup__input_type_name" placeholder="Название" value="" contentEditable="true" minLength="2" maxLength="30" required />
+                    <input type="text" id="title" name="name" className="popup__input popup__input_type_name" placeholder="Название" defaultValue="" minLength="2" maxLength="30" required />
                     <span id="title-error" className="error"></span>
-                    <input type="url" id="link" name="link" className="popup__input popup__input_type_link" placeholder="Ссылка" value="" contentEditable="true" required />
+                    <input type="url" id="link" name="link" className="popup__input popup__input_type_link" placeholder="Ссылка" defaultValue="" required />
                     <span id="link-error" className="error"></span>
                 </>
             } />
@@ -97,7 +98,7 @@ function App() {
                 onClose={closeAllPopups}
                 children={
                 <>
-                    <input type="url" id="avatar" name="avatar" className="popup__input popup__input_type_link" placeholder="Ссылка на аватар" value="" contentEditable="true" required />
+                    <input type="url" id="avatar" name="avatar" className="popup__input popup__input_type_link" placeholder="Ссылка на аватар" defaultValue="" required />
                     <span id="avatar-error" className="error"></span>
                 </>
             } />

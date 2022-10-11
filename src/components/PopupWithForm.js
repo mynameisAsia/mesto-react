@@ -8,7 +8,7 @@ function PopupWithForm({ isOpen, name, title, children, textButton, onClose}) {
                     <h2 className="popup__title">{title}</h2>
                     <form className={`popup__form popup__form-${name}`} name={`${name}-form`} noValidate>
                         {children}
-                        <button type="submit" className="button button_theme_save" value="Сохранить" contentEditable="true">{textButton}</button>
+                        <button type="submit" className="button button_theme_save" defaultValue="Сохранить">{textButton}</button>
                     </form>
                     <button type="button" className="button button_theme_close" aria-label="Закрыть" onClick={onClose}></button>
                 </div>

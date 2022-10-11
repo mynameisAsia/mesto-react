@@ -31,6 +31,7 @@ function Main({currentUser, cards, onEditAvatar, onEditProfile, onAddPlace, onCa
                 <ul className="photos__list">
                     {cards.map((card) => 
                         (<Card 
+                            key={card._id}
                             card={card} 
                             title={card.name} 
                             link={card.link}
