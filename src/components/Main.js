@@ -11,7 +11,7 @@ function Main({currentUser, cards, onEditAvatar, onEditProfile, onAddPlace, onCa
         setUserName(currentUser.name);
         setUserDescription(currentUser.about);
         setUserAvatar(currentUser.avatar);
-    })
+    }, [])
 
     return (
         <main className="content">
